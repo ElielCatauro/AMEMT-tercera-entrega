@@ -1,4 +1,4 @@
-# tp3
+# rick-n-morty
 
 ## Project setup
 ```
