@@ -21,13 +21,13 @@
               <router-link class="nav-link active" to="/">Home</router-link>
             </li>
             <li class="nav-item">
-              <router-link class="nav-link active" to="/Noticias"
+              <router-link class="nav-link active" to="/noticia"
                 >Noticias</router-link
               >
             </li>
             <li class="nav-item">
-              <router-link class="nav-link active" to="/Benchs"
-                >GPU-Benchs</router-link
+              <router-link class="nav-link active" to="/benchs"
+                >Benchs</router-link
               >
             </li>
             <!--  <a class="nav-link disable" href="comingSoon.html"></a>
