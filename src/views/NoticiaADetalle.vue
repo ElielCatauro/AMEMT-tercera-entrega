@@ -6,115 +6,17 @@
         <div class="col-11 col-xl-10 justify-content-center">
           <!-- titulo noticia -->
           <h1 class="d-none d-xl-block">{{ noticia.title }}</h1>
-          <h3 class="d-none d-xl-block">{{ noticia.snippet }}</h3>
           <h4 class="d-xl-none">{{ noticia.title }}</h4>
 
           <!--principio carrusel  -->
-          <div class="col-12 col-xl-11 justify-content-center">
-            <img :src="noticia.image_url" class="d-block w-100" alt="" />
-          </div>
-         <!--  <div class="col-12 col-xl-11 justify-content-center">
-            <div
-              id="carouselExampleIndicators"
-              class="carousel slide"
-              data-ride="carousel"
-            >
-              <ol class="carousel-indicators">
-                <li
-                  data-target="#carouselExampleIndicators"
-                  data-slide-to="0"
-                  class=""
-                ></li>
-                <li
-                  data-target="#carouselExampleIndicators"
-                  data-slide-to="1"
-                  class=""
-                ></li>
-                <li
-                  data-target="#carouselExampleIndicators"
-                  data-slide-to="2"
-                  class=""
-                ></li>
-                <li
-                  data-target="#carouselExampleIndicators"
-                  data-slide-to="3"
-                  class="active"
-                ></li>
-                <li
-                  data-target="#carouselExampleIndicators"
-                  data-slide-to="4"
-                  class=""
-                ></li>
-              </ol>
-              <div class="carousel-inner">
-                <div class="carousel-item">
-                  <img
-                    src="assets/imagenes/imagen0.jpg"
-                    class="d-block w-100"
-                    alt="..."
-                  />
-                </div>
-                <div class="carousel-item">
-                  <img
-                    src="assets/imagenes/imagen1.jpg"
-                    class="d-block w-100"
-                    alt="..."
-                  />
-                </div>
-                <div class="carousel-item">
-                  <img
-                    src="assets/imagenes/imagen2.jpg"
-                    class="d-block w-100"
-                    alt="..."
-                  />
-                </div>
-                <div class="carousel-item active">
-                  <img
-                    src="assets/imagenes/imagen3.jpg"
-                    class="d-block w-100"
-                    alt="..."
-                  />
-                </div>
-                <div class="carousel-item">
-                  <img
-                    src="assets/imagenes/imagen4.jpg"
-                    class="d-block w-100"
-                    alt="..."
-                  />
-                </div>
-              </div>
-              <a
-                class="carousel-control-prev"
-                href="#carouselExampleIndicators"
-                role="button"
-                data-slide="prev"
-              >
-                <span
-                  class="carousel-control-prev-icon"
-                  aria-hidden="true"
-                ></span>
-                <span class="sr-only">Previous</span>
-              </a>
-              <a
-                class="carousel-control-next"
-                href="#carouselExampleIndicators"
-                role="button"
-                data-slide="next"
-              >
-                <span
-                  class="carousel-control-next-icon"
-                  aria-hidden="true"
-                ></span>
-                <span class="sr-only">Next</span>
-              </a>
-            </div>
-          </div> -->
-          <!-- final carrusel -->
+          <Carrusel :imagenes="noticia.image_url">
+          </Carrusel>
+        <!-- final carrusel -->
 
-          <p>{{ noticia.description }}</p>
+          <p  v-for="noticia in noticia.description" :key="noticia" >{{ noticia }}</p>
         </div>
         <!-- Fuente del articulo -->
-        <div class="col">
+        <div class="col-12">
           <h6>
             Fuente :<a :href="noticia.url">{{ noticia.source }}</a>
           </h6>
@@ -147,9 +49,11 @@
 
 <script>
 import NoticiasList from "../components/NoticiasList";
+import Carrusel from "../components/Carrusel";
 export default {
   components: {
     NoticiasList,
+    Carrusel,
   },
   data() {
     return {
@@ -163,8 +67,11 @@ export default {
   methods: {
     async getNoticia(id) {
       this.noticia = await fetch(
-        `https://api.thenewsapi.com/v1/news/uuid/${id}?api_token=TwGoUbP9PrtZLKxqdTniPOCZGHPec5mxNSIMxLkI`
+       /*  `https://api.thenewsapi.com/v1/news/uuid/${id}?api_token=TwGoUbP9PrtZLKxqdTniPOCZGHPec5mxNSIMxLkI` */
+        `https://5fcbef5e51f70e00161f21d1.mockapi.io/noticias/${id}`
       ).then((resp) => resp.json());
+      console.log(this.noticia);
+      console.log(this.noticia.description[0]);
     },
   },
   watch: {

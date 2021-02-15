@@ -9,7 +9,7 @@
         </div> -->
 
     <a @click.prevent="goToDetails" class="btn ">
-      <img :src="noticia.image_url" class="card-img-top" alt="" />
+      <img :src="noticia.image_url[0]" class="card-img-top" alt="" />
       <div class="card-body">
         <p class="card-text">{{ noticia.title }}</p>
       </div>

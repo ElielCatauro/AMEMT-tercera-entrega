@@ -31,13 +31,20 @@ export default {
                     this.noticiasArr = data.articles;                             
                 }) */
 
-      fetch(
+   /*    fetch(
         "https://api.thenewsapi.com/v1/news/all?api_token=TwGoUbP9PrtZLKxqdTniPOCZGHPec5mxNSIMxLkI&language=es&search=gamer"
       )
         .then((resp) => resp.json())
         .then((data) => {
           this.noticiasArr = data.data;
-          console.log(data.data);
+        }); */
+      fetch(
+        "https://5fcbef5e51f70e00161f21d1.mockapi.io/noticias"
+      )
+        .then((resp) => resp.json())
+        .then((data) => {
+          this.noticiasArr = data;
+        console.log(data);
         });
     },
   },

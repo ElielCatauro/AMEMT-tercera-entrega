@@ -1,0 +1,159 @@
+[
+    {
+        "uuid": "1",
+        "title": "Deep Silver anuncia Metro Exodus Enhanced Edition con DLSS 2.0 y un nuevo motor gráfico enfocado al Ray-Tracing",
+        "snippet": "Deep Silver anunció Metro Exodus Enhanced Edition, una versión mejorada de la última entrega de la saga Metro que utilizará una nueva versión de su motor...",
+        "url": "https://www.hd-tecnologia.com/deep-silver-anuncia-metro-exodus-enhanced-edition-con-dlss-2-0-y-un-nuevo-motor-grafico-enfocado-al-ray-tracing/",
+        "image_url": [
+            "https://www.hd-tecnologia.com/imagenes/articulos/2021/02/Deep-Silver-anuncia-Metro-Exodus-Enchanced-Edition-con-DLSS-2.0-y-un-nuevo-motor-grafico-enfocado-al-Ray-Tracing.jpg",
+            "https://www.hd-tecnologia.com/imagenes/articulos/2021/02/Deep-Silver-anuncia-Metro-Exodus-Enhanced-Edition-con-DLSS-2.0-y-un-nuevo-motor-grafico-enfocado-al-Ray-Tracing-3-1536x743.jpg",
+            "https://www.hd-tecnologia.com/imagenes/articulos/2021/02/Webp.net-resizeimage-724x600.jpg"
+        ],
+        "published_at": 1613417550,
+        "source": "HD-tecnologia",
+        "description": [
+            "Deep Silver anunció Metro Exodus Enhanced Edition, una versión mejorada de la última entrega de la saga Metro que utilizará una nueva versión de su motor gráfico 4A enfocada 100% en el ray-tracing para aprovechar al máximo el hardware de última generación tanto de Nvidia como de AMD, incluyendo no solo PC sino también las nuevas consolas.",
+            "“Hemos construido una nueva forma de iluminación con Ray Tracing que trae una serie de optimizaciones, actualizaciones y nuevas características a la iluminación global e iluminación con RT de la que fuimos pioneros con el lanzamiento original de Metro Exodus, así como una implementación actualizada de nuestra poderosa tecnología de Reconstrucción Temporal para mejorar aún más la resolución, el detalle visual y el rendimiento”, declaró el estudio.",
+            "Además, Deep Silver compartió una imagen detallando las características de esta nueva versión en función de las diferentes plataformas:",
+            "Si bien todavía no se mencionaron los requisitos mínimos para esta nueva versión de Metro Exodus, 4A Games mencionó que para jugar esta versión deberemos tener si o si una GPU compatible con Ray-Tracing, dando a entender que esta característica estará siempre activada. La buena noticia para los usuarios de Nvidia es que se soportará DLSS 2.0, teniendo grandes aumentos de rendimiento gracias al uso del reescalado mediante inteligencia artificial.",
+            "Por último, el equipo anunció que esta nueva versión estará disponible de forma gratuita para todos los que ya posean el juego y que llegará a finales del otoño"
+        ]
+    },
+    {
+        "uuid": "2",
+        "title": "¿Problemas para AMD?: Reportan una alta tasa de unidades defectuosas de CPUs Ryzen 5000 y placas madre X570/B550",
+        "snippet": "El conocido ensamblador norteamericano de PCs de escritorio personalizadas PowerGPU advirtió en una serie de tweets la alta tasa de unidades defectuosas ",
+        "url": "https://www.hd-tecnologia.com/problemas-para-amd-reportan-una-alta-tasa-de-unidades-defectuosas-de-cpus-ryzen-5000-y-placas-madre-x570-b550/",
+        "image_url": [
+            "https://www.hd-tecnologia.com/imagenes/articulos/2021/02/%C2%BFProblemas-para-AMD-Los-Ryzen-5000-y-las-placas-madre-X570-estan-reportando-una-alta-tasa-de-unidades-defectuosas.jpg",
+            "https://www.hd-tecnologia.com/imagenes/articulos/2021/02/%C2%BFProblemas-para-AMD-Los-Ryzen-5000-y-las-placas-madre-X570-estan-reportando-una-alta-tasa-de-unidades-defectuosas-2.jpg",
+            "https://www.amd.com/system/files/styles/600px/private/2020-10/648625-vermeer-black-chip-render-1260x709_2.png?itok=AeyOJptW"
+        ],
+        "published_at": 1613417490,
+        "source": "HD-tecnologia",
+        "description": [
+            "El conocido ensamblador norteamericano de PCs de escritorio personalizadas PowerGPU advirtió en una serie de tweets la alta tasa de unidades defectuosas que están teniendo los AMD Ryzen 5000 y las placas madre X570, revelando números alertadores.",
+            "Según PowerGPU, de los 50 AMD Ryzen 9 5950X que recibieron, 8 de ellos estaban “muertos al llegar” (Death On Arrival). En otras palabras, el 16% de estos procesadores que recibió no funcionaban, cuando la tasa de falla normal suele ser del 0.01%, según indicó la propia empresa.",
+            "En cuanto al resto de la línea, el ensamblador también observó fallas en 4 de 50 Ryzen 9 5900X, 4 de 100 Ryzen 7 5800X y 3 de 120 Ryzen 5 5600X. Aunque no lo parezca a simple vista, la tasa de fallos sigue siendo altísima, ya que en comparación, PowerGPU indicó que en el mismo período de tiempo, por el lado de los CPUs azules solo recibieron 1 Intel Core i7-9700K defectuoso.",
+            "“Las fallas en los nuevos CPUs de AMD siguen siendo demasiado altas:",
+            "            AMD Ryzen 5950x x50 unidades 8 doa",
+            "            AMD Ryzen 5900x x50 unidades 4 doa",
+            "            AMD Ryzen 5800x x100 unidades 4 doa",
+            "            AMD Ryzen 5600x x120 unidades 3 doa",
+            "Solo recibimos 1 CPU Intel muerto en nuestro tiempo ensamblando, un 9700k.",
+            "DOA: Muerto al llegar” dijo la empresa en un Tweet que eliminó poco después.",
+            "La empresa también comenta que no solo los Ryzen 5000 están presentando altas tasas de fallos, sino que las placas madre con el chipset X570 y B550 también están presentando problemas de fabricación, independientemente del fabricante. Según PowerGPU, todas las semanas se encuentran entre 3 y 5 placas X570 y B550 con problemas.",
+            "Tras darse a conocer la noticia, el ensamblador coreano PC DIY también informó defectos y fallas similares al utilizar procesadores AMD Ryzen 5000 en placas madre X570/B550, según afirmó Harukaze"
+        ]
+    },
+    {
+        "uuid": "3",
+        "title": "Sony recibe la primera demanda colectiva por el ‘drift’ que presenta el joystick DualSense de la PlayStation 5",
+        "snippet": "Sony podría enfrentar una demanda colectiva por los problemas de drift que presenta el joystick DualSense de la PlayStation 5",
+        "url": "https://www.hd-tecnologia.com/sony-recibe-la-primera-demanda-colectiva-por-el-drift-que-presenta-el-joystick-dualsense-de-la-playstation-5/",
+        "image_url": [
+            "https://www.hd-tecnologia.com/imagenes/articulos/2021/02/Sony-recibe-la-primera-demanda-colectiva-por-el-drift-que-presenta-el-joystick-DualSense-de-la-PlayStation-5.jpg",
+            "data:image/jpeg;base64,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",
+            "https://www.hd-tecnologia.com/imagenes/articulos/2021/02/Sony-recibe-la-primera-demanda-colectiva-por-el-drift-que-presenta-el-joystick-DualSense-de-la-PlayStation-5-2.jpg"
+        ],
+        "published_at": 1613418921,
+        "source": "HD-tecnologia",
+        "description": [
+            "La semana pasada les informamos que Sony podría enfrentar una demanda colectiva por los problemas de drift que presenta el joystick DualSense de la PlayStation 5, y ahora esta se acaba de hacer realidad.",
+            "El bufete de abogados Chimicles Schwartz Kriner & Donaldson-Smith presentó el viernes su demanda ante el Tribunal de Distrito de los Estados Unidos para el Distrito Sur de Nueva York, en nombre del demandante Lmarc Turner y “los consumidores en una situación similar”.",
+            "La misma afirma que el joystick DualSense es un producto “defectuoso”, ya que sufre un defecto de drift. En resumidas palabras, esto quiere decir que los joysticks generan un “movimiento fantasma” sin que los jugadores toquen nada.",
+            "PS5 DualSense Stick Drift",
+            "Los demandantes agregan que esto “compromete la funcionalidad principal del joystick DualSense” y aseguran que Sony fue informada del problema a través de las quejas de los consumidores en Internet",
+            "También mencionan un caso concreto de un jugador que sufrió este problema de drift apenas 10 días después de adquirir la consola. Además, se señala la dificultad de reparar el DualSense y se acusa a Sony de no haber “revelado esta información material a los consumidores”, a pesar de ser consciente del problema.",
+            "“Como resultado de las prácticas comerciales desleales, engañosas y/o fraudulentas de Sony, los propietarios de los controladores DualSense, incluido el demandante, han sufrido una pérdida determinable, un perjuicio de hecho y se han visto perjudicados por la conducta de Sony. En consecuencia, el demandante presenta esta acción para reparar las violaciones de Sony de las leyes estatales de fraude al consumidor, el incumplimiento de la garantía y el enriquecimiento injusto. El demandante busca una reparación monetaria por los daños sufridos, una reparación declarativa y una reparación por mandato judicial”."
+        ]
+    },
+    {
+        "uuid": "4",
+        "title": "Google intenta recuperar la confianza en Stadia y promete añadir 100 juegos en 2021",
+        "snippet": "Tras una serie de noticias negativas, Google anunció que pretende añadir 100 nuevos juegos a su plataforma de streaming, Stadia.",
+        "url": "https://www.hd-tecnologia.com/google-intenta-recuperar-la-confianza-en-stadia-y-promete-anadir-100-juegos-en-2021/",
+        "image_url": [
+            "https://www.hd-tecnologia.com/imagenes/articulos/2021/02/Google-intenta-recuperar-la-confianza-en-Stadia-y-promete-anadir-100-juegos-en-2021.jpg",
+            "https://www.hd-tecnologia.com/imagenes/articulos/2021/02/Google-intenta-recuperar-la-confianza-en-Stadia-y-promete-anadir-100-juegos-en-2021-2.jpg",
+            "https://www.hd-tecnologia.com/imagenes/articulos/2021/02/Google-ya-no-quiere-invertir-en-Stadia-Cierra-sus-estudios-internos-y-Jade-Raymond-deja-la-empresa-2.jpg"
+        ],
+        "published_at": 1613418861,
+        "source": "HD-tecnologia",
+        "description": [
+            "Tras una serie de noticias negativas, Google anunció que pretende añadir 100 nuevos juegos a su plataforma de streaming, Stadia. La compañía está tratando de recuperar la credibilidad en la plataforma después de ser duramente criticada por cerrar sus estudios internos de desarrollo de videojuegos.",
+            "Lo más probable es que este anuncio no atraiga tanta atención como le gustaría al gigante tecnológico, ya que de los 100 juegos anunciados, solo unos pocos fueron revelados, y solo 6 tienen fecha de llegada confirmada:",
+            "            Shantae: Half-Genie Hero Ultimate Edition – 23 de Febrero",
+            "            Shantae: Risky’s Revenge – Director’s Cut – 23 de Febrero",
+            "            It came from space and ate our brains – 2 de Marzo",
+            "            FIFA 21 – 17 de Marzo",
+            "            Kaze and the Wild Masks – 26 de Marzo",
+            "            Judgment – 23 de Abril",
+            "            Killer Queen Black – “Próximamente”",
+            "            Street Power Football – “Próximamente”",
+            "            Hellpoint – “Próximamente”",
+            "Entre los 100 juegos prometidos para este año también se encuentran los que ya había confirmado previamente Google, como es el caso de Far Cry 6, que aparentemente se lanzaría el 25 de mayo, por lo que podríamos verlo poco después en Stadia.",
+            "Sin embargo, todavía hay muchos que creen que Stadia tiene los días contados, dadas las decisiones tomadas por Google y la facilidad con la que la empresa abandona proyectos. Hace solo unos días vimos cómo el creador de Terraria cancelaba la versión del juego para Stadia tras perder el acceso a sus cuentas de Google, afirmando que: “No voy a estar involucrado con una corporación que valora tan poco a sus clientes y a sus socios. Hacer negocios con Google es un riesgo”."
+        ]
+    },
+    {
+        "uuid": "5",
+        "title": "Intel prepara el lanzamiento del Core i9-10900KS Special Edition (Comet Lake) con el Core i9-11900K (Rocket Lake) a la vuelta de la esquina",
+        "snippet": "snippet 5",
+        "url": "url 5",
+        "image_url": ["https://www.hd-tecnologia.com/imagenes/articulos/2021/02/Intel-prepara-el-lanzamiento-de-un-Core-i9-10900KS-Special-Edition-Comet-Lake-con-el-Core-i9-11900K-Rocket-Lake-a-la-vuelta-de-la-esquina.jpg"],
+        "published_at": 1613418801,
+        "source": "source 5",
+        "description": []
+    },
+    {
+        "uuid": "6",
+        "title": "Steam supera los 50.000 juegos y 25.000 DLCs listados",
+        "snippet": "snippet 6",
+        "url": "url 6",
+        "image_url": ["https://www.hd-tecnologia.com/imagenes/articulos/2021/02/Steam-supera-los-50.000-juegos-y-25.000-DLCs-listados.jpg"],
+        "published_at": 1613418741,
+        "source": "source 6",
+        "description": []
+    },
+    {
+        "uuid": "7",
+        "title": "Intel reduce un 13% el precio de sus procesadores de 10ª generación (Comet Lake-S)",
+        "snippet": "snippet 7",
+        "url": "url 7",
+        "image_url": ["https://www.hd-tecnologia.com/imagenes/articulos/2021/02/Intel-reduce-un-13-el-precio-de-sus-procesadores-de-10a-generacion-Comet-Lake-S.jpg"],
+        "published_at": 1613418681,
+        "source": "source 7",
+        "description": []
+    },
+    {
+        "uuid": "8",
+        "title": "La GeForce RTX 3060 todavía no se lanzó, pero algunas tiendas ya la venden al doble de su precio sugerido",
+        "snippet": "snippet 8",
+        "url": "url 8",
+        "image_url": ["https://www.hd-tecnologia.com/imagenes/articulos/2021/02/La-GeForce-RTX-3060-todavia-no-se-lanzo-pero-algunas-tiendas-ya-la-venden-al-doble-de-su-precio-sugerido.jpg"],
+        "published_at": 1613418621,
+        "source": "source 8",
+        "description": []
+    },
+    {
+        "uuid": "9",
+        "title": "Se filtra el Intel Core i3-10105F en Malasia: Una actualización de Comet Lake con caja y logo renovados",
+        "snippet": "snippet 9",
+        "url": "url 9",
+        "image_url": ["https://www.hd-tecnologia.com/imagenes/articulos/2021/02/Se-filtra-el-Intel-Core-i3-10105F-en-Malasia.jpg"],
+        "published_at": 1613418561,
+        "source": "source 9",
+        "description": []
+    },
+    {
+        "uuid": "10",
+        "title": "Microsoft, Google y Qualcomm también se oponen a la adquisición de ARM por parte de NVIDIA",
+        "snippet": "snippet 10",
+        "url": "url 10",
+        "image_url": ["https://www.hd-tecnologia.com/imagenes/articulos/2021/02/Google-Microsoft-y-Qualcomm-tambien-se-oponen-a-la-adquisicion-de-ARM-por-parte-de-NVIDIA.jpg"],
+        "published_at": 1613418501,
+        "source": "source 10",
+        "description": []
+    }
+]
