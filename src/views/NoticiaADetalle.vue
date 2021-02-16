@@ -3,7 +3,7 @@
     <div class="row justify-content-center">
       <!-- noticia -->
       <div class="col-12 col-xl-7 justify-content-center">
-        <div class="col-11 col-xl-10 justify-content-center">
+        <div class="col-11 col-xl-10  justify-content-center">
           <!-- titulo noticia -->
           <h1 class="d-none d-xl-block">{{ noticia.title }}</h1>
           <h4 class="d-xl-none">{{ noticia.title }}</h4>

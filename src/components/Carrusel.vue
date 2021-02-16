@@ -2,8 +2,8 @@
     <div class="col-12 col-xl-11 justify-content-center">
                         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                                <div class="carousel-inner justify-content-center">
-                                <div class="carousel-item  active justify-content-center "  >
-                                    <img src="../assets/logo/min-white.png" class="d-block justify-content-center" alt="..." style="width: 25rem">
+                                <div class="carousel-item active justify-content-center "  >
+                                    <img src="../assets/logo/min-white.png" class=" justify-content-center w-100" alt="..." style="height: 25rem">
                                 </div>
                                 <div v-for="url in imagenes" class="carousel-item " :key="url" ><!-- vfor -->
                                     <img :src="url" class="d-block w-100" alt="...">
@@ -37,5 +37,5 @@ export default {
 };
 </script>
 <styles>
-
+  #carouselExampleIndicators {text-align:center;}
 </style>
