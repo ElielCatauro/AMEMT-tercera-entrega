@@ -1,13 +1,11 @@
 <template >
     <div class="col-12 col-xl-11 justify-content-center">
                         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                               <div class="carousel-inner justify-content-center">
-                                <div class="carousel-item active justify-content-center "  >
-                                    <img src="../assets/logo/min-white.png" class=" justify-content-center w-100" alt="..." style="height: 25rem">
-                                </div>
-                                <div v-for="url in imagenes" class="carousel-item " :key="url" ><!-- vfor -->
-                                    <img :src="url" class="d-block w-100" alt="...">
-                                </div>
+                               <div class="carousel-inner justify-content-center"><!-- contenedor de imagenes -->
+                                    <!-- vfor de imagenes-->
+                                  <div v-for="(url,index) in imagenes" :key="url" class="carousel-item" :class="index == 0 ? 'active' : ''" >
+                                       <img :src="url" class="d-block w-100" alt="...">
+                                  </div>
                             </div>
                             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
