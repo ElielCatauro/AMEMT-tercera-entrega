@@ -7,10 +7,10 @@
              @click="showFiltrosModal = true">
             Filtros
           </button>
-<!-- Button AGREGAR modal -->
+          <!-- Button AGREGAR modal -->
           <button
             class="btn btn-secondary"
-            @click="showAddModal = true">
+            @click="openAddRow">
             Agregar
           </button>
 
@@ -93,88 +93,94 @@
           <!-- Modal AGREGAR-->
           <Modal v-if="showAddModal">
             <template v-slot:title>Agregando una fila</template>
+          
             <template v-slot:body>
               <div class="form-group row justify-content-between">
-                <label for="inp-id">id</label><input id="inp-id" />
+                <label for="inp-id">id</label><input id="inp-id"  v-model=" selectRow.id  " />
               </div>
               <div class="form-group row justify-content-between">
                 <label for="inp-GPU_Name">GPU_Name</label
-                ><input id="inp-GPU_Name" />
+                ><input id="inp-GPU_Name" v-model=" selectRow.GPU_Name  "  />
               </div>
               <div class="form-group row justify-content-between">
                 <label for="inp-TEST_Date">TEST_Date</label
-                ><input id="inp-TEST_Date" />
+                ><input id="inp-TEST_Date" v-model="  selectRow.TEST_Date " />
               </div>
               <div class="form-group row justify-content-between">
                 <label for="inp-G3D_Mark">G3D_Mark</label
-                ><input id="inp-G3D_Mark" />
+                ><input id="inp-G3D_Mark" v-model="  selectRow.G3D_Mark  "  />
               </div>
               <div class="form-group row justify-content-between">
                 <label for="inp-G2D_Mark">G2D_Mark</label
-                ><input id="inp-G2D_Mark" />
+                ><input id="inp-G2D_Mark" v-model=" selectRow.G2D_Mark  "  />
               </div>
             </template>
+            
             <template v-slot:footer>
               <button id="btnCancelar" class="btn btn-dark" @click="showAddModal = false">Cancelar</button>
-              <button id="btnAceptar" class="btn btn-secondary"  @click="showAddModal = true">Aceptar</button>
+              <button id="btnAceptar" class="btn btn-secondary"  @click="addGpu">Aceptar</button>
             </template>
           </Modal>
+
           <!-- MODAL EDITAR -->
-          <Modal v-if="showEditModal">
+          <Modal v-if="showEditModal" >
             <template v-slot:title>Modificando Fila</template>
-            <template v-slot:body>
-              <div class="form-group row justify-content-between">
-                <label for="inp-id">id</label><input id="inp-id" />
-              </div>
+            
+          <template v-slot:body>
               <div class="form-group row justify-content-between">
                 <label for="inp-GPU_Name">GPU_Name</label
-                ><input id="inp-GPU_Name" />
+                ><input id="inp-GPU_Name" v-model=" selectRow.GPU_Name  "  />
               </div>
               <div class="form-group row justify-content-between">
                 <label for="inp-TEST_Date">TEST_Date</label
-                ><input id="inp-TEST_Date" />
+                ><input id="inp-TEST_Date" v-model="  selectRow.TEST_Date " />
               </div>
               <div class="form-group row justify-content-between">
                 <label for="inp-G3D_Mark">G3D_Mark</label
-                ><input id="inp-G3D_Mark" />
+                ><input id="inp-G3D_Mark" v-model="  selectRow.G3D_Mark  "  />
               </div>
               <div class="form-group row justify-content-between">
                 <label for="inp-G2D_Mark">G2D_Mark</label
-                ><input id="inp-G2D_Mark" />
+                ><input id="inp-G2D_Mark" v-model=" selectRow.G2D_Mark  "  />
               </div>
             </template>
+           
+            
             <template v-slot:footer>
               <button id="btnCancelar" class="btn btn-dark" @click="showEditModal = false">Cancelar</button>
-              <button id="btnAceptar" class="btn btn-secondary"  @click="showEditModal = false">Aceptar</button>
+              <button id="btnAceptar" class="btn btn-secondary"  @click="editGpu">Aceptar</button>
             </template>
           </Modal>
+
           <!-- MODAL ELIMINAR -->
-          <Modal v-if="showDeleteModal">
+          <Modal v-if="showDeleteModal" :gpu="selectRow" >
             <template v-slot:title>Eliminando fila, esta seguro?</template>
+            
             <template v-slot:body>
               <div class="form-group row justify-content-between">
-                <label for="inp-id">id</label><input id="inp-id" />
+                <label for="inp-id">ID</label><input id="inp-id" :value="selectRow.id " disabled />
               </div>
               <div class="form-group row justify-content-between">
                 <label for="inp-GPU_Name">GPU_Name</label
-                ><input id="inp-GPU_Name" />
+                ><input id="inp-GPU_Name" :value="  selectRow.GPU_Name  " disabled />
               </div>
               <div class="form-group row justify-content-between">
                 <label for="inp-TEST_Date">TEST_Date</label
-                ><input id="inp-TEST_Date" />
+                ><input id="inp-TEST_Date" :value="  selectRow.TEST_Date " disabled/>
               </div>
               <div class="form-group row justify-content-between">
                 <label for="inp-G3D_Mark">G3D_Mark</label
-                ><input id="inp-G3D_Mark" />
+                ><input id="inp-G3D_Mark" :value="  selectRow.G3D_Mark  " disabled />
               </div>
               <div class="form-group row justify-content-between">
                 <label for="inp-G2D_Mark">G2D_Mark</label
-                ><input id="inp-G2D_Mark" />
+                ><input id="inp-G2D_Mark" :value=" selectRow.G2D_Mark  " disabled />
               </div>
             </template>
+           
             <template v-slot:footer>
               <button id="btnCancelar" class="btn btn-dark" @click="showDeleteModal = false">Cancelar</button>
-              <button id="btnAceptar" class="btn btn-secondary"  @click="showDeleteModal = false">Aceptar</button>
+              <button id="btnAceptar" class="btn btn-secondary"  @click="deleteGpu">Aceptar</button>
             </template>
           </Modal>
   </div>
@@ -201,16 +207,31 @@ export default {
 
   computed: mapGetters(['allGpus']),
   methods: {
-      openDeleteRow(id){
-        console.log(this.showDeleteModal);
-        this.showDeleteModal=true;
-        console.log(this.showDeleteModal);
+      openAddRow(){
+        this.showAddModal=true;
         this.selectRow= {};
-        console.log(id);
+        },
+      openDeleteRow(id){
+        this.showDeleteModal=true;
+        this.selectRow= {...this.allGpus.filter(gpu => gpu.id === id)[0]};
         },
       openEditRow(id){
-        console.log(id);
+        this.showEditModal=true;
+        this.selectRow= {...this.allGpus.filter(gpu => gpu.id === id)[0]};
         },
+      deleteGpu(){
+        this.$store.commit('deleteGpu',{ gpuID : this.selectRow.id});
+        this.showDeleteModal=false;   
+      },
+      editGpu(){
+        this.$store.commit('editGpu',{ gpu : this.selectRow})
+        this.showEditModal=false;
+      },
+      addGpu(){
+        this.$store.commit('addGpu',{ gpu : this.selectRow})
+        this.showAddModal=false;
+      },
+      
   },
 
  

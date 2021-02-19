@@ -11,6 +11,17 @@ export default new Vuex.Store({
     setGpus(state,payload){
       state.gpus=payload.data;
     },
+    addGpu(state,payload){
+      state.gpus.push(payload.gpu); 
+    },
+    editGpu(state,payload){
+      state.gpus=state.gpus.map((gpu)=>{return gpu.id==payload.gpu.id ? payload.gpu : gpu; });     
+     
+    },
+    deleteGpu(state,payload){
+      state.gpus=state.gpus.filter(gpu => gpu.id!=payload.gpuID);
+    
+    },
   },
   actions: {
     fetchGpus({ commit }) {
