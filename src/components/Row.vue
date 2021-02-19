@@ -6,8 +6,9 @@
           <td >{{G3D_Mark}}</td>
           <td >{{G2D_Mark}}</td>
           <td class="btn-group">
-            <button  class="btn btn-secondary" @click="deleteRow">Modificar</button>
-              <button  class="btn btn-secondary"  @click="editRow">Eliminar</button>
+            
+            <button  class="btn btn-secondary" @click="editRow">Modificar</button>
+            <button  class="btn btn-secondary"  @click="deleteRow">Eliminar</button>
           </td>
     </tr>
 </template>
@@ -15,7 +16,7 @@
 export default {
   props: {
     id: {
-      type: Number,
+      type: String,
       required: true,
     },
     GPU_Name: {
@@ -23,25 +24,27 @@ export default {
       required: true,
     },
     TEST_Date: {
-      type: Date,
+      type: String,
       required: false,
     },
     G3D_Mark: {
       type: String,
       required: true,
-    },
+    }, 
     G2D_Mark: {
       type: String,
       required: true,
     },
   },
   methods: {
-    deleteContact() {
-      this.$store.commit('deleteRow', {contactId: this.contactId})
+    deleteRow(){
+      this.$emit('delete-row',this.id);
+       /* this.$store.commit('deleteRow', {contactId: this.contactId}) */
     },
-    toggleFavourite() {
-      this.$store.commit('editRow', {contactId: this.contactId})
-    },
+    editRow(){
+       this.$emit('edit-row',this.id);
+      /*  this.$store.commit('editRow', {contactId: this.contactId}) */
+    }
   },
 };
 </script>

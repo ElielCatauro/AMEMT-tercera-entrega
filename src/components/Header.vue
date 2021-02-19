@@ -73,4 +73,10 @@ header .bg-dark {
     background-color: black !important;
     color: white !important;
 }
+
+header .sticky-top {
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+}
 </style>
