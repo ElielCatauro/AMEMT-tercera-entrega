@@ -249,7 +249,7 @@ export default {
       showFiltrosModal: false,
       selectRow: {},
       showProgress: false,
-      tiempoBarra: 1,
+      tiempoBarra: 2,
     };
   },
 
