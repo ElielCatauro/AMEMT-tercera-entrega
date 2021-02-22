@@ -51,14 +51,5 @@ export default new Vuex.Store({
       return dataFiltrada;
     }
  
-    /*   favouriteContacts(state) {
-        return state.contacts.filter((contact) => contact.isFavorite === true);
-      },
-      notFavouriteContacts(state) {
-        return state.contacts.filter((contact) => contact.isFavorite === false);
-      },
-      allContacts(state) {
-        return state.contacts; 
-      }*/
   }
 })
