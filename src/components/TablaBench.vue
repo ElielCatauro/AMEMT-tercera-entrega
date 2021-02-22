@@ -6,6 +6,8 @@
     </button>
     <!-- Button AGREGAR modal -->
     <button class="btn btn-secondary" @click="openAddRow">Agregar</button>
+      
+    
 
     <table id="tabla" class="table table-dark bg-primary">
       <!-- TABLA -->
@@ -19,9 +21,23 @@
           <th>Modificar/Eliminar</th>
         </tr>
       </thead>
-      <tbody id="cuerpoTabla">
+      <tbody v-if="inSearch">
         <Row
-          v-for="gpu in allGpus"
+          v-for="gpu in searchGpus"
+          :key="gpu.id"
+          :id="gpu.id"
+          :GPU_Name="gpu.GPU_Name"
+          :TEST_Date="gpu.TEST_Date"
+          :G3D_Mark="gpu.G3D_Mark"
+          :G2D_Mark="gpu.G2D_Mark"
+          @delete-row="openDeleteRow"
+          @edit-row="openEditRow"
+        >
+        </Row>
+      </tbody>
+      <tbody v-else>
+        <Row
+          v-for="gpu in allGpusEl"
           :key="gpu.id"
           :id="gpu.id"
           :GPU_Name="gpu.GPU_Name"
@@ -46,7 +62,7 @@
               <label class="input-group-text" for="filGPU_Name">
                 Contiene</label
               >
-              <input id="filGPU_Name" />
+              <input id="filGPU_Name" v-model="selectSearch.GPU_Name" />
             </div>
           </div>
           <div class="form-group row justify-content-between">
@@ -55,7 +71,7 @@
               <label class="input-group-text" for="filTEST_Date">
                 Contiene</label
               >
-              <input id="filTEST_Date" />
+              <input id="filTEST_Date" v-model="selectSearch.TEST_Date" />
             </div>
           </div>
 
@@ -63,18 +79,18 @@
             <p>G3D_Mark</p>
             <div>
               <label class="input-group-text" for="filG3D_MarkMin">Min</label>
-              <input id="filG3D_MarkMin" />
+              <input id="filG3D_MarkMin" v-model="selectSearch.G3D_MarkMin" />
               <label class="input-group-text" for="filG3D_MarkMax">Max</label>
-              <input id="filG3D_MarkMax" />
+              <input id="filG3D_MarkMax" v-model="selectSearch.G3D_MarkMax" />
             </div>
           </div>
           <div class="form-group row justify-content-between">
             <p>G2D_Mark</p>
             <div>
               <label class="input-group-text" for="filG2D_MarkMin">Min</label>
-              <input id="filG2D_MarkMin" />
+              <input id="filG2D_MarkMin" v-model="selectSearch.G2D_MarkMin" />
               <label class="input-group-text" for="filG2D_MarkMax">Max</label>
-              <input id="filG2D_MarkMax" />
+              <input id="filG2D_MarkMax" v-model="selectSearch.G2D_MarkMax" />
             </div>
           </div>
         </div>
@@ -88,13 +104,17 @@
         >
           Cancelar
         </button>
+        <button class="btn btn-dark"  @click="{showFiltrosModal = false;inSearch=false;selectSearch={}; }" >
+          Limpiar filtros
+        </button>
         <button
           id="btnAceptar"
           class="btn btn-secondary"
-          @click="showFiltrosModal = false"
+          @click="showFiltrosModal = false;inSearch=true; "
         >
-          Aceptar
+          Filtrar
         </button>
+        
       </template>
     </Modal>
 
@@ -216,21 +236,21 @@
         </button>
       </template>
     </Modal>
+    <!-- PROGRESS BAR -->
     <Modal v-if="showProgress">
       <template v-slot:title>Espere</template>
 
       <template v-slot:body>
-        <ProgressBar :segundos="tiempoBarra"></ProgressBar> 
+        <ProgressBar :segundos="tiempoBarra"></ProgressBar>
       </template>
       <template v-slot:footer>
         <h4>aplicando cambios</h4>
       </template>
-    
     </Modal>
   </div>
 </template>
 <script>
-import { mapGetters } from "vuex";
+/* import { mapGetters } from "vuex"; */
 import Row from "../components/Row";
 import Modal from "../components/Modal";
 import ProgressBar from "../components/ProgressBar";
@@ -248,12 +268,22 @@ export default {
       showDeleteModal: false,
       showFiltrosModal: false,
       selectRow: {},
+
+      selectSearch: {},
+      inSearch:false,
+
       showProgress: false,
       tiempoBarra: 2,
     };
   },
 
-  computed: mapGetters(["allGpus"]),
+  computed: {
+    allGpusEl(){return this.$store.getters.allGpus; },
+    searchGpus(){return this.$store.getters.getSearchGpu(this.selectSearch); },
+   
+    }
+    ,
+  
   methods: {
     showBarrita() {
       console.log("mostrando barrita");
@@ -266,11 +296,11 @@ export default {
     },
     openDeleteRow(id) {
       this.showDeleteModal = true;
-      this.selectRow = { ...this.allGpus.filter((gpu) => gpu.id === id)[0] };
+      this.selectRow = { ...this.allGpusEl.filter((gpu) => gpu.id === id)[0] };
     },
     openEditRow(id) {
       this.showEditModal = true;
-      this.selectRow = { ...this.allGpus.filter((gpu) => gpu.id === id)[0] };
+      this.selectRow = { ...this.allGpusEl.filter((gpu) => gpu.id === id)[0] };
     },
     deleteGpu() {
       this.$store.commit("deleteGpu", { gpuID: this.selectRow.id });
