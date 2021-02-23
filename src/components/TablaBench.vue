@@ -21,23 +21,9 @@
           <th>Modificar/Eliminar</th>
         </tr>
       </thead>
-      <tbody v-if="inSearch">
+      <tbody >
         <Row
-          v-for="gpu in searchGpus"
-          :key="gpu.id"
-          :id="gpu.id"
-          :GPU_Name="gpu.GPU_Name"
-          :TEST_Date="gpu.TEST_Date"
-          :G3D_Mark="gpu.G3D_Mark"
-          :G2D_Mark="gpu.G2D_Mark"
-          @delete-row="openDeleteRow"
-          @edit-row="openEditRow"
-        >
-        </Row>
-      </tbody>
-      <tbody v-else>
-        <Row
-          v-for="gpu in allGpusEl"
+          v-for="gpu in returnTable"
           :key="gpu.id"
           :id="gpu.id"
           :GPU_Name="gpu.GPU_Name"
@@ -280,11 +266,12 @@ export default {
   computed: {
     allGpusEl(){return this.$store.getters.allGpus; },
     searchGpus(){return this.$store.getters.getSearchGpu(this.selectSearch); },
-   
+    returnTable(){return this.inSearch ? this.searchGpus  : this.allGpusEl },
     }
     ,
   
   methods: {
+    
     showBarrita() {
       console.log("mostrando barrita");
       this.showProgress = true;
