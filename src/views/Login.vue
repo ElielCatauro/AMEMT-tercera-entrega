@@ -1,23 +1,23 @@
 <template >
   <div>
-     <div class="bg-primary">
-
-        <div class="row justify-content-center">
-            <div class="col-10">
-                
-                <div class="row justify-content-center">
-                    <div class=""><img src="../assets/logo/min-white2.svg" alt=""></div>
-                </div>
-                
+    <div class="bg-primary">
+      <div class="row justify-content-center">
+        <div class="col-10">
+          <div class="row justify-content-center">
+            <div class="">
+              <img src="../assets/logo/min-white2.svg" alt="" />
             </div>
+          </div>
         </div>
+      </div>
     </div>
-   
+
     <Modal>
       <template v-slot:title>{{ submitButtonText }}</template>
 
       <template v-slot:body>
-        <form @submit.prevent="submitForm">
+      
+         <form @submit.prevent="submitForm">
           <div class="form-group row justify-content-between">
             <label for="email">E-mail</label>
             <input type="email" id="email" v-model="email" />
@@ -34,11 +34,11 @@
             <button class="btn btn-dark bg-dark" @click="toggleLogin">
               {{ toggleModeButtonText }}
             </button>
-            <button class="btn btn btn-secondary" @click="goHome">
-              Cancelar
-            </button>
+            <button class="btn btn-secondary" @click="goHome">
+              go Home
+            </button> 
           </div>
-        </form>
+        </form> 
       </template>
     </Modal>
   </div>
@@ -89,7 +89,7 @@ export default {
           password: this.password,
         });
       }
-      this.goHome();
+     
     },
     toggleLogin() {
       this.isLogin = !this.isLogin;
