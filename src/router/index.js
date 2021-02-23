@@ -5,6 +5,8 @@ import Noticia from '../views/Noticias.vue'
 import NoticiaADetalle from '../views/NoticiaADetalle.vue'
 import ComingSoon from '../views/ComingSoon.vue'
 import Benchs from '../views/Benchs.vue'
+import Login from '../views/Login.vue'
+
 
 Vue.use(VueRouter)
 const routes = [
@@ -16,7 +18,8 @@ const routes = [
     {
     path: '/benchs',
     name: 'Benchs',
-    component: Benchs
+    component: Benchs,
+    meta: {requiereAuth :true}
   },
   {
     path: '/comingSoon',
@@ -33,7 +36,13 @@ const routes = [
     name: 'Noticia',
     component: Noticia
   },
+  {
+    path: "/auth",
+     component: Login
+  },
 ]
+
+
 
 const router = new VueRouter({
   mode: 'history',

@@ -30,10 +30,12 @@
                 >Benchs</router-link
               >
             </li>
-            <!--  <a class="nav-link disable" href="comingSoon.html"></a>
-                  <a class="nav-link disable" href="comingSoon.html">Hardware</a>
-                  <a class="nav-link disable" href="table_hard.html">GPU-Benchs</a>
-                 -->
+            <li  v-if="!isLogged" class="nav-item">
+              <router-link  class="nav-link active" to="/auth">Login</router-link>
+            </li>
+            <li  v-if="isLogged" class="nav-item">
+              <a  class="nav-link active" @click="logout">Logout</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -55,6 +57,21 @@
     <!-- FIN NAVBAR -->
   </header>
 </template>
+<script>
+export default {
+  computed: {
+        isLogged() {
+            return this.$store.getters.isLogged;
+        }
+    },
+    methods: {
+        logout() {
+            this.$store.dispatch('logout');
+        }
+    }
+}
+</script>
+ 
 <style>
 nav {
   padding: 30px;
