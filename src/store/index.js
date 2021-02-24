@@ -39,7 +39,8 @@ export default new Vuex.Store({
     },
     /* Logout --> state */
     clearUser(state) {
-      state.user = {};
+      state.user.token = null;
+      state.user.userId = null;
     },
   },
   getters: {
